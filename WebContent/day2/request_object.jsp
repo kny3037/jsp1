@@ -22,7 +22,7 @@
 	 	<li>컨텍스트(context) : <%= request.getContextPath() %></li> <!-- 프로젝트이름 /jsp1 -->
 	 	<li>서버 IP : <%= request.getLocalAddr() %>, <%= request.getLocalName() %></li>
 	 	<li>서버 Port : <%= request.getLocalPort() %></li>
-	 	<li>클라이언트 Ip : <%= request.getRemoteAddr() %></li>  <!-- IPv6 (64바이트,8자리) -->
+	 	<li>클라이언트 IP : <%= request.getRemoteAddr() %></li>  <!-- IPv6 (64바이트,8자리) -->
 	 	<% 	//request 객체로 전달되는 인코딩 형식 설정.
 	 		request.setCharacterEncoding("UTF-8"); %>
 	 	<li>문자 인코딩 형식 : <%= request.getCharacterEncoding() %></li>

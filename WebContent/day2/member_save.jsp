@@ -35,8 +35,6 @@
 	String addr = request.getParameter("addr");
 	String gender = request.getParameter("gender");
 	String[] hobby = request.getParameterValues("hobby");
-	
-	
 
 	//참고 : hobby는 배열입니다. -> getParameterValues()메소드로 데이터를 받습니다. 
 %>
@@ -48,7 +46,7 @@
 	<li>나이 : <%= age %></li>
 	<li>주소 : <%= addr %></li>
 	<li>성별 : <%= gender %></li>
-	<li>취미 : <%= Arrays.toString(hobby) %></li>
+	<li>취미 : <%= Arrays.toString(hobby) %></li>   <!-- array로 배열 출력하게끔 설정 -->
 </ul>
 </body>
 </html>
