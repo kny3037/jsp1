@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>JSP1 프로젝트[6]-회원 등록 </title><!-- 스타일 참고  -->
-<link rel="stylesheet" href="member.css">
+<link rel="stylesheet" href="../css/member.css">
 <script>
 	function validCheck() {
 		const frm = document.frmReg;
@@ -57,14 +57,18 @@
 				</tr>
 				<tr>
 					<td><label>주소</label></td>
-					<td><select name="addr">
+					<td><select name="addr" id="addr_select">
 							<!-- value 속성은 서버에 전달시킬 값 -->
 							<option value="서울">서울</option>
-							<option value="인천" selected>인천</option>  <!-- selected 는 기본 선택 값. -->
+							<option value="인천" selected>인천</option>
+							<!-- selected 는 기본 선택 값. -->
 							<option value="대전">대전</option>
 							<option value="광주">광주</option>
-							<option value="부산">부산</option>
-					</select></td>
+							<option value="기타">기타</option>
+					</select> 
+					<span id="addr_id"><input type="text" name="addr_etc" disabled="disabled" 
+							placeholder="기타 지역을 입력하세요." >
+					</span></td>
 				</tr>
 				<tr>
 					<td><label>성별</label></td>
@@ -93,5 +97,17 @@
 			</table>
 		</form>
 	</div>
+	<script type="text/javascript">
+	document.getElementById("addr_select").addEventListener("change",function(){
+		if(this.value=="기타"){
+//			document.getElementById("addr_id").style.display="inline-block";
+			document.frmReg.addr_etc.disabled=false;
+		}else {
+//			document.getElementById("addr_id").style.display="none";
+			document.frmReg.addr_etc.disabled=true;
+		}
+		
+	});
+	</script>
 </body>
 </html>
