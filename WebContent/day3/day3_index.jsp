@@ -43,7 +43,7 @@
 		<li>3. ../member/<a href = ../member/registration.html>registration.html</a> : member폴더의 모든 .jsp파일 </li>
 		<p> ㄴ day2 member.html과 frontEnd는 같음(실행화면이 같다), 그러나 처리하는 과정이 다르다.</p>
 		<p> - 화면에 데이터를 출력하는 파일과 데이터 처리하는 파일로 나눠서 작성할 수 있다.</p>
-		<p> ㄴ 흐름 -> 1) registration.html에서 회원 정보 입력하고 submit한다.(요청 변경)</p>
+		<p> ㄴ 흐름 -> 1).. registration.html에서 회원 정보 입력하고 submit한다.(요청 변경)</p>
 		<p class ="ptag">2) registration.jsp에서 ⅰ.입력한 정보를 DB 저장하고(dao메소드), ⅱ.dto로 데이터를 담아 request객체에 저장하고, ⅲ. 3번 경로로 요청을 전달한다.(요청 전달)</p>
 		<p class ="ptag">3) registration_view.jsp에서 request객체에 저장된 데이터를 화면에 출력한다. 추가기능 : 회원리스트 click하면 이동(요청 변경)</p>
 		<p class ="ptag">4) list.jsp에서 DB에서 데이터를 list에 저장하고 request객체에 다시한번 저장한 후 5번 경로로 요청을 전달한다. (요청 전달)</p>
